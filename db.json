@@ -1,53 +1,143 @@
 {
   "books": [
     {
-      "title": "Cien años de soledad",
-      "author": "Gabriel García Márquez",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "genre": "Programming",
+      "publisher": "Prentice Hall",
+      "year": 2008,
+      "pages": 464,
+      "language": "English",
+      "isbn": "9780132350884",
+      "available": false,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+      "description": "A handbook of agile software craftsmanship.",
       "id": "1"
     },
     {
-      "title": "Don Quijote de la Mancha",
-      "author": "Miguel de Cervantes",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "genre": "Software Development",
+      "publisher": "Addison-Wesley",
+      "year": 1999,
+      "pages": 352,
+      "language": "English",
+      "isbn": "9780201616224",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg",
+      "description": "Classic book for modern software developers.",
       "id": "2"
+    },
+    {
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "genre": "Literary Fiction",
+      "publisher": "Editorial Sudamericana",
+      "year": 1967,
+      "pages": 471,
+      "language": "Spanish",
+      "isbn": "9780307474728",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780307474728-L.jpg",
+      "description": "The story of the Buendía family and the mythical town of Macondo.",
+      "id": "3"
     },
     {
       "title": "1984",
       "author": "George Orwell",
-      "id": "3"
+      "genre": "Dystopian Fiction",
+      "publisher": "Secker & Warburg",
+      "year": 1949,
+      "pages": 328,
+      "language": "English",
+      "isbn": "9780451524935",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg",
+      "description": "A totalitarian society where Big Brother controls everything.",
+      "id": "4"
     },
     {
       "title": "El principito",
       "author": "Antoine de Saint-Exupéry",
-      "id": "4"
+      "genre": "Fable / Children's literature",
+      "publisher": "Reynal & Hitchcock",
+      "year": 1943,
+      "pages": 96,
+      "language": "French",
+      "isbn": "9780156012195",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg",
+      "description": "A young prince visits various planets and learns about love and friendship.",
+      "id": "5"
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "genre": "Dystopian Fiction",
+      "publisher": "Ballantine Books",
+      "year": 1953,
+      "pages": 158,
+      "language": "English",
+      "isbn": "9781451673319",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9781451673319-L.jpg",
+      "description": "A future where firemen burn books and knowledge is suppressed.",
+      "id": "6"
     },
     {
       "title": "Orgullo y prejuicio",
       "author": "Jane Austen",
-      "id": "5"
+      "genre": "Romance / Classic",
+      "publisher": "T. Egerton",
+      "year": 1813,
+      "pages": 279,
+      "language": "English",
+      "isbn": "9780141439518",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+      "description": "The romantic clash between Elizabeth Bennet and Mr. Darcy.",
+      "id": "7"
     },
     {
       "title": "Matar a un ruiseñor",
       "author": "Harper Lee",
-      "id": "6"
+      "genre": "Southern Gothic / Bildungsroman",
+      "publisher": "J.B. Lippincott & Co.",
+      "year": 1960,
+      "pages": 281,
+      "language": "English",
+      "isbn": "9780061120084",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg",
+      "description": "A lawyer defends a black man falsely accused of rape in the American South.",
+      "id": "8"
     },
     {
       "title": "La metamorfosis",
       "author": "Franz Kafka",
-      "id": "7"
-    },
-    {
-      "title": "Ulises",
-      "author": "James Joyce",
-      "id": "8"
-    },
-    {
-      "title": "En busca del tiempo perdido",
-      "author": "Marcel Proust",
+      "genre": "Absurdist Fiction / Novella",
+      "publisher": "Kurt Wolff Verlag",
+      "year": 1915,
+      "pages": 96,
+      "language": "German",
+      "isbn": "9780553213690",
+      "available": true,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780553213690-L.jpg",
+      "description": "A salesman wakes up transformed into a giant insect.",
       "id": "9"
     },
     {
       "title": "Crimen y castigo",
       "author": "Fiódor Dostoyevski",
+      "genre": "Philosophical novel / Psychological fiction",
+      "publisher": "The Russian Messenger",
+      "year": 1866,
+      "pages": 671,
+      "language": "Russian",
+      "isbn": "9780143058144",
+      "available": false,
+      "cover": "https://covers.openlibrary.org/b/isbn/9780143058144-L.jpg",
+      "description": "The moral dilemmas of a former student who commits murder.",
       "id": "10"
     }
   ],

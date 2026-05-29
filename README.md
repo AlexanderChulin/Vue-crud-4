@@ -1,42 +1,127 @@
-# .
+# Vue CRUD (Vite + Vue 3)
 
-This template should help get you started developing with Vue 3 in Vite.
+CRUD construido con Vue 3 y Vite. Incluye vistas para listar, crear y editar libros, y un archivo `db.json` para pruebas con `json-server`.
 
-## Recommended IDE Setup
+**Estado:** Prototipo / desarrollo
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Requisitos
 
-## Recommended Browser Setup
+- Node.js >= 20.19.0 (o >= 22.12.0)
+- npm
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Nota: Vite requiere una versión moderna de Node; si al ejecutar `npm run dev` aparece un error sobre la versión de Node, actualice usando `nvm` o el instalador oficial.
 
-## Type Support for `.vue` Imports in TS
+## Instalación
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Clonar el repositorio:
 
-## Customize configuration
+```bash
+git clone <url-del-repo>
+cd Vue-crud4
+```
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+2. Instalar dependencias:
 
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Desarrollo
 
-```sh
+Iniciar la aplicación en modo desarrollo (Vite):
+
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Si quiere servir la API de prueba local basada en `db.json`:
 
-```sh
-npm run build
+```bash
+# Instalar json-server globalmente o usar npx
+npx json-server --watch db.json --port 3000
 ```
+
+La API quedará disponible en `http://localhost:3000` (ajuste el puerto si es necesario).
+
+## Build para producción
+
+```bash
+npm run build
+npm run preview
+```
+
+## Docker (opcional)
+
+El repositorio incluye `Dockerfile` y `docker-compose.yml`. Para levantar la app con Docker:
+
+```bash
+docker compose up --build
+```
+
+## Estructura del proyecto
+
+- `src/` – código fuente de la aplicación
+  - `views/` – vistas (`HomeView.vue`, `CreateBookView.vue`, `EditBookView.vue`)
+  - `components/` – componentes reutilizables (p. ej. `Navbar.vue`)
+  - `router/` – definiciones de rutas (`index.ts`)
+  - `services/` – cliente API (axios)
+- `db.json` – datos de ejemplo para `json-server`
+
+## API — Endpoints de ejemplo (json-server)
+
+La API de prueba expone la colección `books` en la raíz del servidor. Asumiendo `json-server` corriendo en `http://localhost:3000`, los endpoints principales son:
+
+- **Listar libros (GET):** `GET /books`
+
+```bash
+curl http://localhost:3000/books
+```
+
+- **Obtener libro por id (GET):** `GET /books/:id`
+
+```bash
+curl http://localhost:3000/books/1
+```
+
+- **Crear libro (POST):** `POST /books`
+
+Ejemplo de petición:
+
+```bash
+curl -X POST http://localhost:3000/books \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Nuevo libro",
+    "author": "Autor Ejemplo",
+    "year": 2026,
+    "available": true
+  }'
+```
+
+- **Actualizar libro (PUT):** `PUT /books/:id` (reemplaza todo el recurso)
+
+```bash
+curl -X PUT http://localhost:3000/books/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Clean Code (edición actualizada)",
+    "author": "Robert C. Martin",
+    "year": 2008,
+    "available": true
+  }'
+```
+
+- **Borrar libro (DELETE):** `DELETE /books/:id`
+
+```bash
+curl -X DELETE http://localhost:3000/books/1
+```
+
+### Parámetros y filtros útiles
+
+- Paginación: `?_page=1&_limit=10`
+- Búsqueda simple (q): `?q=Pragmatic`
+- Orden y sort: `?_sort=year&_order=desc`
+- Filtrado por campo: `?author=Andrew%20Hunt`
+
+---
