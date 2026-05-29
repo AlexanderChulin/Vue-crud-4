@@ -1,0 +1,15 @@
+services:
+  crud-4:
+    build: .
+    container_name: crud-4
+
+    ports:
+      - "5173:5173"
+      - "3000:3000"
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    stdin_open: true
+    tty: true

@@ -1,0 +1,55 @@
+{
+  "books": [
+    {
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "id": "1"
+    },
+    {
+      "title": "Don Quijote de la Mancha",
+      "author": "Miguel de Cervantes",
+      "id": "2"
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "id": "3"
+    },
+    {
+      "title": "El principito",
+      "author": "Antoine de Saint-Exupéry",
+      "id": "4"
+    },
+    {
+      "title": "Orgullo y prejuicio",
+      "author": "Jane Austen",
+      "id": "5"
+    },
+    {
+      "title": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "id": "6"
+    },
+    {
+      "title": "La metamorfosis",
+      "author": "Franz Kafka",
+      "id": "7"
+    },
+    {
+      "title": "Ulises",
+      "author": "James Joyce",
+      "id": "8"
+    },
+    {
+      "title": "En busca del tiempo perdido",
+      "author": "Marcel Proust",
+      "id": "9"
+    },
+    {
+      "title": "Crimen y castigo",
+      "author": "Fiódor Dostoyevski",
+      "id": "10"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
